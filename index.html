@@ -306,6 +306,47 @@
       .nav-tools .btn { display:none; }
     }
 
+  
+    .prayer-event {
+      display:grid; grid-template-columns:auto 1fr; gap:27px; align-items:start;
+      padding:38px; border-radius:var(--radius); color:#fff;
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,.15), transparent 31%),
+        linear-gradient(135deg, var(--wine), var(--pink));
+      box-shadow:var(--shadow);
+    }
+    .prayer-icon {
+      width:70px; height:70px; display:grid; place-items:center; border-radius:22px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.17);
+      font-size:31px;
+    }
+    .prayer-content .label { color:#ffd5e7; margin-bottom:9px; }
+    .prayer-content h2 { color:#fff; margin-bottom:14px; }
+    .prayer-intro {
+      margin:0 0 25px; max-width:760px; color:rgba(255,255,255,.87);
+      font-size:17px; line-height:1.7;
+    }
+    .prayer-details {
+      display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:12px;
+    }
+    .prayer-detail {
+      padding:17px 18px; border-radius:17px; background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .prayer-detail small {
+      display:block; margin-bottom:6px; color:#ffd5e7; font-size:11px;
+      letter-spacing:.12em; text-transform:uppercase; font-weight:800;
+    }
+    .prayer-detail strong { font-size:16px; line-height:1.45; }
+
+    @media (max-width: 600px) {
+      .prayer-event { grid-template-columns:1fr; padding:20px; gap:16px; }
+      .prayer-icon { width:58px; height:58px; border-radius:18px; font-size:27px; }
+      .prayer-intro { font-size:15px; margin-bottom:18px; }
+      .prayer-details { grid-template-columns:1fr; gap:9px; }
+      .prayer-detail { padding:13px 14px; }
+    }
+
   </style>
 </head>
 <body>
@@ -313,7 +354,7 @@
     <div class="container nav-inner">
       <a class="brand" href="#inicio"><span class="brand-mark">E</span><span>Festa de Ester 2026</span></a>
       <nav class="nav-links" aria-label="Navegação">
-        <a href="#tema">Tema</a><a href="#visao">Visão</a><a href="#hino">Hino</a><a href="#inscricao">Inscrição</a>
+        <a href="#tema">Tema</a><a href="#oracao">Orações</a><a href="#visao">Visão</a><a href="#hino">Hino</a><a href="#inscricao">Inscrição</a>
       </nav>
       <div class="nav-tools">
         <div class="lang-switch" aria-label="Seleccionar idioma / Select language">
@@ -352,6 +393,7 @@
       </div>
     </section>
 
+    
     <section class="section" id="tema">
       <div class="container">
         <div class="label">Tema Oficial</div>
@@ -363,14 +405,45 @@
             <div><small>Festa de Ester 2026</small><p>Edição Moçambique · Maputo</p></div>
           </div>
           <div class="theme-b">
-            <div class="verse"><strong>Salmos 85:6</strong><p>“Porventura não voltarás a vivificar-nos, para que o Teu povo se alegre em Ti?”</p></div>
+            <div class="verse">
+              <strong>Salmos 85:6</strong>
+              <p>“Porventura não voltarás a vivificar-nos, para que o Teu povo se alegre em Ti?”</p>
+            </div>
             <p>Este encontro visa inspirar mulheres líderes de vários ministérios a interceder, fortalecer a sua chamada e contribuir para o avivamento da Igreja e da nação.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="visao">
+
+    <section class="section" id="oracao">
+      <div class="container">
+        <div class="prayer-event">
+          <div class="prayer-icon">🙏</div>
+          <div class="prayer-content">
+            <div class="label">Momento Especial</div>
+            <h2>Orações e louvores pela nação</h2>
+            <p class="prayer-intro">Este evento será precedido de momentos de oração e louvor em prol da nação moçambicana.</p>
+            <div class="prayer-details">
+              <div class="prayer-detail">
+                <small>Data</small>
+                <strong>Sexta-feira, 12/06</strong>
+              </div>
+              <div class="prayer-detail">
+                <small>Horário</small>
+                <strong>18:30 – 21:00h</strong>
+              </div>
+              <div class="prayer-detail">
+                <small>Modalidade</small>
+                <strong>Presencial e online</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="visao">
       <div class="container">
         <div class="label">A Iniciativa</div>
         <h2>Visão e razão de ser</h2>
@@ -424,7 +497,7 @@
         <aside class="side">
           <div class="label">Inscrição e Pagamento</div>
           <h2>Garanta a sua participação.</h2>
-          <p>Inscrição destinada exclusivamente a mulheres. Preencha o formulário para participar na Festa de Ester Moçambique.</p>
+          <p>Inscrição destinada exclusivamente a mulheres líderes. Preencha o formulário para participar na Festa de Ester Moçambique.</p>
           <div class="side-list">
             <div class="side-item">📅 Sábado, 13 de Junho de 2026</div>
             <div class="side-item">🕗 Das 08h00 às 15h00</div>
@@ -436,7 +509,7 @@
             <small>Contactos para mais informações</small>
             <div class="contact-phones">
               <a href="tel:+258843099520">📞 84 309 9520</a>
-              <a href="tel:+258848733060">📞 84 873 3060</a>
+              <a href="tel:+258844060235">📞 84 406 0235</a>
             </div>
           </div>
           <div class="payment">
@@ -498,13 +571,26 @@
   <footer>
     <div class="container footer">
       <strong>Festa de Ester 2026 · Moçambique</strong>
-      <span>Mais informações: <a href="tel:+258843099520">84 309 9520</a> ou <a href="tel:+258848733060">84 873 3060</a> · <a href="mailto:festadeestermoz@gmail.com">festadeestermoz@gmail.com</a></span>
+      <span>Mais informações: <a href="tel:+258843099520">84 309 9520</a> ou <a href="tel:+258844060235">84 406 0235</a> · <a href="mailto:festadeestermoz@gmail.com">festadeestermoz@gmail.com</a></span>
       <span>Ativando o Avivamento Nacional · Salmos 85:6</span>
     </div>
   </footer>
 
   <script>
-    const translations = {"Festa de Ester 2026": "Feast of Esther 2026", "Tema": "Theme", "Visão": "Vision", "Hino": "Hymn", "Inscrição": "Registration", "Inscreva-se": "Register", "Moçambique · Maputo · 2026": "Mozambique · Maputo · 2026", "Festa de": "Feast of", "Ester": "Esther", "Um encontro espiritual de mulheres chamadas a apoiar, firmar, realizar e impactar a Igreja de Deus através da oração, comunhão, liderança e avivamento nacional.": "A spiritual gathering for women called to support, stand firm, accomplish and impact the Church of God through prayer, fellowship, leadership and national revival.", "Ester 4:14": "Esther 4:14", "“E quem sabe se não foi para tal tempo como este que chegaste ao reino?”": "“And who knows but that you have come to your royal position for such a time as this?”", "Fazer Inscrição": "Register Now", "Conhecer a Visão": "Discover the Vision", "Data e Hora": "Date and Time", "Sábado, 13 Jun · 08h–15h": "Saturday, 13 Jun · 08:00–15:00", "Local": "Venue", "Auditório, Igreja Redimida (Paragem Estaleiro)": "Auditorium, Redeemed Church (Estaleiro Stop)", "Investimento": "Investment", "Inclui lanche, almoço e souvenir": "Includes snack, lunch and souvenir", "Pagamento via M-Pesa": "Payment via M-Pesa", "Reserve a Data": "Save the Date", "Visionária / Fundadora": "Visionary / Founder", "Pastora Folu Adeboye": "Pastor Folu Adeboye", "Tema Oficial": "Official Theme", "Ativando o Avivamento Nacional": "Activating the National Revival", "Um chamado ao despertar espiritual, à renovação do propósito e ao serviço colectivo para a glória de Deus e edificação da nação.": "A call to spiritual awakening, renewed purpose and collective service for the glory of God and the building of the nation.", "Edição Moçambique · Maputo": "Mozambique Edition · Maputo", "Salmos 85:6": "Psalm 85:6", "“Porventura não voltarás a vivificar-nos, para que o Teu povo se alegre em Ti?”": "“Will You not revive us again, that Your people may rejoice in You?”", "Este encontro visa inspirar mulheres líderes de vários ministérios a interceder, fortalecer a sua chamada e contribuir para o avivamento da Igreja e da nação.": "This gathering seeks to inspire women leaders from various ministries to intercede, strengthen their calling and contribute to revival in the Church and the nation.", "A Iniciativa": "The Initiative", "Visão e razão de ser": "Vision and Purpose", "A Festa de Ester reúne mulheres com responsabilidades ministeriais semelhantes para comunhão, fortalecimento e intercessão.": "The Feast of Esther brings together women with similar ministry responsibilities for fellowship, strengthening and intercession.", "A visão da iniciativa é reunir mulheres de mentes e ministérios semelhantes: Supervisoras Gerais, esposas dos Supervisores Gerais, Pastoras líderes de ministérios, mulheres fundadoras, mulheres líderes de entidades Cristãs e mulheres que lideram um grupo Cristão ou outro.": "The vision of this initiative is to gather like-minded women in ministry: female General Overseers, wives of General Overseers, women pastors leading ministries, women founders, women leading Christian organisations and women who lead a Christian group or other ministry.", "Razão de Ser": "Purpose", "A festa destina-se a desenvolver excelentes habilidades ministeriais em mulheres chamadas a apoiar, firmar, realizar e impactar a Igreja de Deus para a promoção da consciência do Céu e da construção da nação. É para colmatar a lacuna, intercedendo pelas igrejas, ministérios e por toda a Nação.": "The gathering is designed to develop excellent ministry skills in women called to support, stand firm, accomplish and impact the Church of God, promoting heavenly consciousness and nation building. It seeks to stand in the gap through intercession for churches, ministries and the nation.", "A Visionária": "The Visionary", "A Festa de Ester é um evento anual multidenominacional que começou na Nigéria há 25 anos, pela graça de Deus, através da Pastora Folu Adeboye, esposa do Supervisor Geral da Igreja Cristã Redimida de Deus, Pastor Enoch Adeboye.": "The Feast of Esther is an annual multi-denominational event that began in Nigeria 25 years ago, by the grace of God, through Pastor Folu Adeboye, wife of the General Overseer of the Redeemed Christian Church of God, Pastor Enoch Adeboye.", "Propósito do Encontro": "Gathering Purpose", "Fé, liderança e comunhão": "Faith, Leadership and Fellowship", "O programa reúne oração, ensino, encorajamento ministerial e comunhão para mulheres em funções de liderança e apoio.": "The programme brings together prayer, teaching, ministry encouragement and fellowship for women in leadership and support roles.", "Renovação Espiritual": "Spiritual Renewal", "Momentos de oração, ensino e reflexão com foco no avivamento pessoal e nacional.": "Moments of prayer, teaching and reflection focused on personal and national revival.", "Mulheres no Ministério": "Women in Ministry", "Fortalecimento para mulheres chamadas a apoiar, liderar e impactar a obra de Deus.": "Strengthening for women called to support, lead and impact the work of God.", "Comunhão": "Fellowship", "Um espaço especial para conectar, partilhar, aprender e edificar relações ministeriais.": "A special space to connect, share, learn and build ministry relationships.", "Hino Oficial": "Official Hymn", "Inscrição e Pagamento": "Registration and Payment", "Garanta a sua participação.": "Secure Your Place.", "Inscrição destinada exclusivamente a mulheres. Preencha o formulário para participar na Festa de Ester Moçambique.": "Registration is exclusively for women. Complete the form to participate in the Feast of Esther Mozambique.", "Sábado, 13 de Junho de 2026": "Saturday, 13 June 2026", "Das 08h00 às 15h00": "From 08:00 to 15:00", "📍 Auditório da Igreja Cristã Redimida de Deus, Palácio de Judá": "📍 Auditorium, Redeemed Christian Church of God, Palace of Judah", "💳 Investimento: 1.000 MT — inclui lanche, almoço e souvenir": "💳 Investment: 1,000 MT — includes snack, lunch and souvenir", "📍 Ver localização no Google Maps": "📍 View location on Google Maps", "Contactos para mais informações": "Contacts for More Information", "Pagamento do Investimento · M-Pesa": "Investment Payment · M-Pesa", "Após o pagamento, guarde e anexe o comprovativo no formulário.": "After payment, keep and attach the proof of payment in the form.", "Dados Pessoais": "Personal Details", "Nome e Apelido": "First Name and Surname", "Nome e apelido": "First name and surname", "Endereço de Email": "Email Address", "Número de Telemóvel (incluindo código do país)": "Mobile Number (including country code)", "Número do WhatsApp": "WhatsApp Number", "Posição no Ministério": "Position in Ministry", "Ex.: Pastora, Diaconisa, Líder de Ministério": "E.g.: Pastor, Deaconess, Ministry Leader", "Pagamento e Confirmação": "Payment and Confirmation", "Pagamento:": "Payment:", "O investimento é de": "The investment is", "e inclui": "and includes", "lanche, almoço e souvenir": "snack, lunch and souvenir", "Efectue o pagamento por": "Make the payment via", "em nome de": "in the name of", "e anexe o comprovativo abaixo.": "and attach the proof below.", "Comprovativo do Pagamento": "Proof of Payment", "Mensagem / Observações": "Message / Notes", "Indique alguma necessidade especial ou informação adicional": "Indicate any special need or additional information", "Confirmo que efectuei o pagamento do investimento de 1.000 MT e anexei o comprovativo.": "I confirm that I have paid the investment of 1,000 MT and attached the proof of payment.", "Gostaria de receber actualizações sobre a Festa de Ester 2026 por WhatsApp ou email.": "I would like to receive updates about Feast of Esther 2026 by WhatsApp or email.", "Enviar a Minha Inscrição": "Submit My Registration", "Ao submeter, os dados do formulário e o comprovativo serão encaminhados para festadeestermoz@gmail.com para fins de inscrição e confirmação.": "Upon submission, the form data and proof of payment will be sent to festadeestermoz@gmail.com for registration and confirmation purposes.", "Mais informações:": "More information:"};
+    const translations = {
+
+    "Momento Especial": "Special Moment",
+    "Orações e louvores pela nação": "Prayers and praises for the nation",
+    "Este evento será precedido de momentos de oração e louvor em prol da nação moçambicana.": "This event will be preceded by moments of prayer and praise for the Mozambican nation.",
+    "Data": "Date",
+    "Sexta-feira, 12/06": "Friday, 12/06",
+    "Horário": "Time",
+    "18:30 – 21:00h": "18:30 – 21:00",
+    "Modalidade": "Format",
+    "Presencial e online": "Onsite and online",
+"Festa de Ester 2026": "Feast of Esther 2026", "Tema": "Theme",
+    "Orações": "Prayer", "Visão": "Vision", "Hino": "Hymn", "Inscrição": "Registration", "Inscreva-se": "Register", "Moçambique · Maputo · 2026": "Mozambique · Maputo · 2026", "Festa de": "Feast of", "Ester": "Esther", "Um encontro espiritual de mulheres chamadas a apoiar, firmar, realizar e impactar a Igreja de Deus através da oração, comunhão, liderança e avivamento nacional.": "A spiritual gathering for women called to support, stand firm, accomplish and impact the Church of God through prayer, fellowship, leadership and national revival.", "Ester 4:14": "Esther 4:14", "“E quem sabe se não foi para tal tempo como este que chegaste ao reino?”": "“And who knows but that you have come to your royal position for such a time as this?”", "Fazer Inscrição": "Register Now", "Conhecer a Visão": "Discover the Vision", "Data e Hora": "Date and Time", "Sábado, 13 Jun · 08h–15h": "Saturday, 13 Jun · 08:00–15:00", "Local": "Venue", "Auditório, Igreja Redimida (Paragem Estaleiro)": "Auditorium, Redeemed Church (Estaleiro Stop)", "Investimento": "Investment", "Inclui lanche, almoço e souvenir": "Includes snack, lunch and souvenir", "Pagamento via M-Pesa": "Payment via M-Pesa", "Reserve a Data": "Save the Date", "Visionária / Fundadora": "Visionary / Founder", "Pastora Folu Adeboye": "Pastor Folu Adeboye", "Tema Oficial": "Official Theme", "Ativando o Avivamento Nacional": "Activating the National Revival", "Um chamado ao despertar espiritual, à renovação do propósito e ao serviço colectivo para a glória de Deus e edificação da nação.": "A call to spiritual awakening, renewed purpose and collective service for the glory of God and the building of the nation.", "Edição Moçambique · Maputo": "Mozambique Edition · Maputo", "Salmos 85:6": "Psalm 85:6", "“Porventura não voltarás a vivificar-nos, para que o Teu povo se alegre em Ti?”": "“Will You not revive us again, that Your people may rejoice in You?”", "Este encontro visa inspirar mulheres líderes de vários ministérios a interceder, fortalecer a sua chamada e contribuir para o avivamento da Igreja e da nação.": "This gathering seeks to inspire women leaders from various ministries to intercede, strengthen their calling and contribute to revival in the Church and the nation.", "A Iniciativa": "The Initiative", "Visão e razão de ser": "Vision and Purpose", "A Festa de Ester reúne mulheres com responsabilidades ministeriais semelhantes para comunhão, fortalecimento e intercessão.": "The Feast of Esther brings together women with similar ministry responsibilities for fellowship, strengthening and intercession.", "A visão da iniciativa é reunir mulheres de mentes e ministérios semelhantes: Supervisoras Gerais, esposas dos Supervisores Gerais, Pastoras líderes de ministérios, mulheres fundadoras, mulheres líderes de entidades Cristãs e mulheres que lideram um grupo Cristão ou outro.": "The vision of this initiative is to gather like-minded women in ministry: female General Overseers, wives of General Overseers, women pastors leading ministries, women founders, women leading Christian organisations and women who lead a Christian group or other ministry.", "Razão de Ser": "Purpose", "A festa destina-se a desenvolver excelentes habilidades ministeriais em mulheres chamadas a apoiar, firmar, realizar e impactar a Igreja de Deus para a promoção da consciência do Céu e da construção da nação. É para colmatar a lacuna, intercedendo pelas igrejas, ministérios e por toda a Nação.": "The gathering is designed to develop excellent ministry skills in women called to support, stand firm, accomplish and impact the Church of God, promoting heavenly consciousness and nation building. It seeks to stand in the gap through intercession for churches, ministries and the nation.", "A Visionária": "The Visionary", "A Festa de Ester é um evento anual multidenominacional que começou na Nigéria há 25 anos, pela graça de Deus, através da Pastora Folu Adeboye, esposa do Supervisor Geral da Igreja Cristã Redimida de Deus, Pastor Enoch Adeboye.": "The Feast of Esther is an annual multi-denominational event that began in Nigeria 25 years ago, by the grace of God, through Pastor Folu Adeboye, wife of the General Overseer of the Redeemed Christian Church of God, Pastor Enoch Adeboye.", "Propósito do Encontro": "Gathering Purpose", "Fé, liderança e comunhão": "Faith, Leadership and Fellowship", "O programa reúne oração, ensino, encorajamento ministerial e comunhão para mulheres em funções de liderança e apoio.": "The programme brings together prayer, teaching, ministry encouragement and fellowship for women in leadership and support roles.", "Renovação Espiritual": "Spiritual Renewal", "Momentos de oração, ensino e reflexão com foco no avivamento pessoal e nacional.": "Moments of prayer, teaching and reflection focused on personal and national revival.", "Mulheres no Ministério": "Women in Ministry", "Fortalecimento para mulheres chamadas a apoiar, liderar e impactar a obra de Deus.": "Strengthening for women called to support, lead and impact the work of God.", "Comunhão": "Fellowship", "Um espaço especial para conectar, partilhar, aprender e edificar relações ministeriais.": "A special space to connect, share, learn and build ministry relationships.", "Hino Oficial": "Official Hymn", "Inscrição e Pagamento": "Registration and Payment", "Garanta a sua participação.": "Secure Your Place.", "Inscrição destinada exclusivamente a mulheres líderes. Preencha o formulário para participar na Festa de Ester Moçambique.": "Registration is exclusively for women leaders. Complete the form to participate in the Feast of Esther Mozambique.", "Sábado, 13 de Junho de 2026": "Saturday, 13 June 2026", "Das 08h00 às 15h00": "From 08:00 to 15:00", "📍 Auditório da Igreja Cristã Redimida de Deus, Palácio de Judá": "📍 Auditorium, Redeemed Christian Church of God, Palace of Judah", "💳 Investimento: 1.000 MT — inclui lanche, almoço e souvenir": "💳 Investment: 1,000 MT — includes snack, lunch and souvenir", "📍 Ver localização no Google Maps": "📍 View location on Google Maps", "Contactos para mais informações": "Contacts for More Information", "Pagamento do Investimento · M-Pesa": "Investment Payment · M-Pesa", "Após o pagamento, guarde e anexe o comprovativo no formulário.": "After payment, keep and attach the proof of payment in the form.", "Dados Pessoais": "Personal Details", "Nome e Apelido": "First Name and Surname", "Nome e apelido": "First name and surname", "Endereço de Email": "Email Address", "Número de Telemóvel (incluindo código do país)": "Mobile Number (including country code)", "Número do WhatsApp": "WhatsApp Number", "Posição no Ministério": "Position in Ministry", "Ex.: Pastora, Diaconisa, Líder de Ministério": "E.g.: Pastor, Deaconess, Ministry Leader", "Pagamento e Confirmação": "Payment and Confirmation", "Pagamento:": "Payment:", "O investimento é de": "The investment is", "e inclui": "and includes", "lanche, almoço e souvenir": "snack, lunch and souvenir", "Efectue o pagamento por": "Make the payment via", "em nome de": "in the name of", "e anexe o comprovativo abaixo.": "and attach the proof below.", "Comprovativo do Pagamento": "Proof of Payment", "Mensagem / Observações": "Message / Notes", "Indique alguma necessidade especial ou informação adicional": "Indicate any special need or additional information", "Confirmo que efectuei o pagamento do investimento de 1.000 MT e anexei o comprovativo.": "I confirm that I have paid the investment of 1,000 MT and attached the proof of payment.", "Gostaria de receber actualizações sobre a Festa de Ester 2026 por WhatsApp ou email.": "I would like to receive updates about Feast of Esther 2026 by WhatsApp or email.", "Enviar a Minha Inscrição": "Submit My Registration", "Ao submeter, os dados do formulário e o comprovativo serão encaminhados para festadeestermoz@gmail.com para fins de inscrição e confirmação.": "Upon submission, the form data and proof of payment will be sent to festadeestermoz@gmail.com for registration and confirmation purposes.", "Mais informações:": "More information:",
+    "Ativando o Avivamento Nacional · Salmos 85:6": "Prayers and praises for the nation · Friday, 12/06"};
     const reverseTranslations = Object.fromEntries(Object.entries(translations).map(([pt, en]) => [en, pt]));
     const placeholders = {
       pt: {
